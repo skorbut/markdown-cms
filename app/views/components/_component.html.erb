@@ -1,2 +1,4 @@
 <h1><%= component.name %></h1>
 <p><%= render_markdown(component.text) %></p>
+<%= button_to "edit", edit_component_path(component), :method=>:get %>
+<%= button_to "delete", component, :method=>:delete, :class=>:destroy %>

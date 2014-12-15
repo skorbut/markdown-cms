@@ -1,15 +1,14 @@
-Markdown "CMS"
-==============
+# Markdown "CMS"
 
 a small rails app to include Markdown content in a page.
 
 To start:
 
-´´´ shell
+``` shell
 bundle install
 rake db:migrate
 rake db:seed
 rails s
-´´´
+```
 
 Open http://localhost:3000/components

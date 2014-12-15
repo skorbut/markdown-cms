@@ -14,9 +14,25 @@ class ComponentsController < ApplicationController
     redirect_to components_path
   end
 
+  def edit
+    component
+  end
+
+  def destroy
+    puts "Component class is #{component.class}"
+    component.destroy
+    redirect_to components_path
+
+  end
+
   private
 
   def component_params
     params.require(:component).permit(:name, :text)
+  end
+
+  def component
+    id = params[:id]
+    @component ||= Component.find(id)
   end
 end
